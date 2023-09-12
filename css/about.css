@@ -1,0 +1,346 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-color: #16181b;
+  position: relative;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus {
+  color: white; /* Ubah warna sesuai keinginan Anda */
+}
+/* CSS untuk Navbar Container */
+.navbar {
+  background-color: #16181b;
+  width: 95%;
+  margin: auto;
+  border: #f3fa61 3px solid;
+  border-top: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: space-between; /* Menyusun elemen dengan jarak di antara mereka */
+  align-items: center; /* Untuk menyusun vertikal elemen-elemen navbar */
+  padding: 10px 20px;
+  box-shadow: 0px 0px 20px rgba(243, 250, 97, 0.5); /* Efek glow */
+}
+
+/* CSS untuk Navbar Brand (Kiri Pojok) */
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+/* CSS untuk Navbar Brand Teks */
+.navbar-brand {
+  color: #f3fa61;
+  text-decoration: none;
+  font-size: 24px;
+  margin-right: 20px; /* Jarak antara brand dan menu */
+}
+
+/* CSS untuk Navbar Menu (Daftar Tautan) */
+.navbar-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* CSS untuk Setiap Tautan dalam Navbar */
+.navbar-menu ul li {
+  padding-right: 20px;
+  margin-left: 5px;
+}
+
+.navbar-menu ul li a {
+  color: #6d6d6d;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative; /* Menambahkan posisi relatif */
+  transition: color 0.3s ease;
+}
+
+/* CSS untuk Tautan Navbar saat Hover */
+.navbar-menu ul li a:hover {
+  color: #ffffff;
+  transform: translateY(-5px); /* Menggeser tautan ke atas saat hover */
+}
+
+/* Animasi garis bawah pada teks nav saat hover */
+.navbar-menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Jarak garis bawah dari teks */
+  left: 0;
+  width: 0;
+  height: 3px; /* Ketebalan garis bawah */
+  background-color: #ffffff; /* Warna garis bawah saat hover */
+  transition: width 0.3s ease;
+}
+
+.navbar-menu ul li a:hover::after {
+  width: 100%; /* Panjang garis bawah saat hover */
+}
+
+/* Gaya untuk container profil dan konten */
+/* untuk card */
+.card {
+  background-color: rgba(0, 0, 0, 0.2); /* Latar belakang putih transparan */
+  padding: 20px;
+  margin: 0 auto;
+  width: 95%;
+  border-radius: 10px; /* Sudut bulat untuk card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan card */
+  margin-top: 20px; /* Jarak antara paragraf dan tombol */
+  animation: fadeInup 1s ease-in-out;
+}
+/* Keyframes untuk animasi fadeIn */
+@keyframes fadeInup {
+  from {
+    opacity: 0; /* Mulai dengan opasitas 0 (tidak terlihat) */
+    transform: translatey(-100px); /* Geser elemen ke atas */
+  }
+  to {
+    opacity: 1; /* Selesaikan dengan opasitas 1 (terlihat) */
+    transform: translateY(0); /* Tidak ada perubahan posisi vertikal */
+  }
+}
+
+.card h4 {
+  color: #ededed;
+  padding-bottom: 30px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Jarak antara profil dan konten */
+}
+.content {
+  display: flex;
+}
+.infome {
+  padding-right: 12px;
+}
+
+.content p {
+  text-align: justify;
+  color: #d9d9d9;
+  font-size: 16px;
+  margin: 0;
+}
+
+.infome p {
+  font-size: 14px;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out; /* Animasi fade-in dengan durasi 1 detik */
+}
+/* Keyframes untuk animasi fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Mulai dengan opasitas 0 (tidak terlihat) */
+    transform: translatex(100px); /* Geser elemen ke atas */
+  }
+  to {
+    opacity: 1; /* Selesaikan dengan opasitas 1 (terlihat) */
+    transform: translateY(0); /* Tidak ada perubahan posisi vertikal */
+  }
+}
+.profil-image img {
+  border-radius: 50%; /* Membuat gambar profil bulat */
+  border: 4px solid rgb(255, 255, 110); /* Border kuning */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 30px;
+  box-shadow: 0px 0px 20px rgba(244, 255, 32, 0.5); /* Efek glow */
+  animation: glow 1s ease-in-out; /* Animasi efek glow */
+}
+
+/* Keyframes untuk animasi efek glow */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 2px transparent;
+  }
+  100% {
+    box-shadow: 0 0 10px 5px yellow; /* Shadow kuning bersinar */
+  }
+  from {
+    opacity: 0; /* Mulai dengan opasitas 0 (tidak terlihat) */
+    transform: translatex(-100px); /* Geser elemen ke atas */
+  }
+  to {
+    opacity: 1; /* Selesaikan dengan opasitas 1 (terlihat) */
+    transform: translatex(0); /* Tidak ada perubahan posisi vertikal */
+  }
+}
+
+.skill h3 {
+  padding: 10px 0;
+  font-size: 24px;
+  color: #909090;
+  margin-left: 25px;
+}
+
+/* grid */
+/* CSS untuk elemen .grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(160px, 1fr)
+  ); /* Lebar item minimum 180px */
+  grid-gap: 10px; /* Jarak antara item */
+  margin-left: 22px;
+  margin: 20px;
+  justify-content: center; /* Penempatan item di tengah */
+  margin-bottom: 200px;
+  overflow: hidden;
+}
+
+/* CSS untuk elemen .item */
+.item {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: flex;
+}
+
+/* CSS untuk elemen gambar di dalam .item */
+.item img {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px; /* Jarak antara gambar dan teks */
+}
+
+/* CSS untuk elemen h4 di dalam .item */
+.item h4 {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  margin: 0; /* Menghapus margin bawaan */
+}
+
+/* contac */
+/* CSS untuk elemen kontak */
+.contact-icon {
+  background-color: #16181b;
+  width: 30%;
+  height: 80px;
+  border: #f3fa61 3px solid;
+  border-bottom: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 20px rgba(243, 250, 97, 0.5); /* Efek glow */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; /* Posisikan elemen di tengah secara horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon a {
+  margin: 20px 10px 10px 10px; /* Menambahkan jarak antara ikon-ikon */
+}
+
+/* CSS untuk ikon */
+.contact-icon .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-icon .icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.contact-icon .icon:hover {
+  background-color: rgb(255, 255, 110); /* Warna latar belakang saat hover */
+  box-shadow: 0px 0px 20px rgba(243, 250, 97, 0.8); /* Efek glow */
+}
+
+/* Media Query untuk Tablet */
+@media screen and (max-width: 768px) {
+  /* Bagian Navbar */
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mengatur tautan navbar di tengah */
+  }
+  .profil-image img {
+    width: 150px;
+    height: 150px;
+  }
+  .contact-icon {
+    width: 50%;
+  }
+  .infome p {
+    width: 120%;
+    font-size: 12px;
+    padding-right: 20px;
+  }
+}
+
+/* Media Query untuk Mobile */
+@media screen and (max-width: 480px) {
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mengatur tautan navbar di tengah */
+  }
+  .contact-icon {
+    height: 60px;
+    width: 50%;
+  }
+  .contact-icon .icon {
+    width: 35px;
+    height: 35px;
+  }
+  .contact-icon a {
+    margin: 5px 10px -5px 10px;
+  }
+
+  .profil-image img {
+    width: 120px;
+    height: 120px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column; /* Mengubah tata letak menjadi kolom */
+    align-items: center; /* Pusatkan elemen horizontal di tengah */
+    text-align: center; /* Pusatkan teks horizontal di tengah */
+  }
+
+  .infome p {
+    width: 120%;
+    font-size: 12px;
+    padding-right: 30px;
+  }
+}
